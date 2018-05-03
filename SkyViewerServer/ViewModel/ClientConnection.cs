@@ -28,10 +28,8 @@ namespace SkyViewerServer
             this.CloseCommand = new RelayCommand(this.CloseCommand_Excuted);
 
             this.SettingCommand = new RelayCommand(this.SettingCommand_Excuted);
-
         }
-
-
+        
         private string clientIpAddress;
 
         /// <summary>
