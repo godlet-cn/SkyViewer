@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkyViewerServer"
         mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
-        Title="WinSetting" Height="200" Width="300">
+        Title="设置" Height="200" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"></RowDefinition>
