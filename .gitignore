@@ -13,8 +13,6 @@ Output
 *.chk
 *.sln.ide
 *.coverage
-TestResults
-FakesAssemblies
 rcf
 *~
 *.sln.ide
@@ -23,7 +21,6 @@ rcf
 .vs
 project.lock.json
 *.project.lock.json
-src/Microsoft.Fx.Portability.Offline/data/
 /nupkg
 .tools/
 .data

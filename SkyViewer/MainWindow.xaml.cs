@@ -121,6 +121,8 @@ namespace SkyViewer
                         IntPtr winptr = new WindowInteropHelper(this).Handle;
                         WindowHelper.SetWindowPos(winptr, WindowHelper.HWND_TOP, (int)location.X, (int)location.Y, 0, 0, WindowHelper.SWP_NOSIZE);
                         WindowHelper.SetForegroundWindowX(winptr);
+
+                        this.browser.GetBrowserHost().WasResized();
                     }));
                 }
             }
