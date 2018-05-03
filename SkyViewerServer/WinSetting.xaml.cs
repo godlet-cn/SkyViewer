@@ -19,8 +19,7 @@ namespace SkyViewerServer
             this.tbWidth.Text = setting.Location.Width.ToString();
             this.tbHeight.Text = setting.Location.Height.ToString();
         }
-
-
+        
         public delegate void ClientSettingChanged(ClientSetting setting);
         public event ClientSettingChanged SettingChanged;
 

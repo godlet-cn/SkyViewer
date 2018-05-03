@@ -1,16 +1,16 @@
-ï»¿using Fleck;
+using Fleck;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 
-namespace SkyViewerServer
+namespace SkyViewerServer.ViewModel
 {
-    public class ServerViewModel : ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
         private WebSocketServer webSocketServer;
-        public ServerViewModel()
+        public MainViewModel()
         {
             ClientConnections = new ObservableCollection<ClientConnection>();
 
@@ -20,18 +20,18 @@ namespace SkyViewerServer
         }
 
         /// <summary>
-        /// å¯åŠ¨æµè§ˆå™¨
+        /// Æô¶¯ä¯ÀÀÆ÷
         /// </summary>
         public RelayCommand StartCommand { get; set; }
 
         /// <summary>
-        /// å¯åŠ¨æµè§ˆå™¨
+        /// Æô¶¯ä¯ÀÀÆ÷
         /// </summary>
         public RelayCommand CloseCommand { get; set; }
 
         private bool isServerStarted;
         /// <summary>
-        /// Serveræ˜¯å¦å·²ç»å¯åŠ¨
+        /// ServerÊÇ·ñÒÑ¾­Æô¶¯
         /// </summary>
         public bool IsServerStarted
         {
@@ -109,11 +109,11 @@ namespace SkyViewerServer
                     }
 
                     ClientConnections.Add(new ClientConnection(socket));
-                    Console.WriteLine("å½“å‰è¿æ¥æ•°" + ClientConnections.Count);
+                    Console.WriteLine("µ±Ç°Á¬½ÓÊı" + ClientConnections.Count);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("å½“å‰è¿æ¥æ•°" + ClientConnections.Count);
+                    Console.WriteLine("µ±Ç°Á¬½ÓÊı" + ClientConnections.Count);
                 }
             }));
         }

@@ -10,6 +10,10 @@
         <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></local:BooleanToVisibilityConverter>
     </Window.Resources>
 
+    <Window.DataContext>
+        <Binding Path="Main" Source="{StaticResource Locator}" />
+    </Window.DataContext>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>

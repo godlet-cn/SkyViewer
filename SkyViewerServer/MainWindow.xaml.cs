@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using SkyViewerServer.ViewModel;
+using System.Windows;
 
 namespace SkyViewerServer
 {
@@ -10,16 +11,7 @@ namespace SkyViewerServer
         public MainWindow()
         {
             InitializeComponent();
-
-            this.Loaded += MainWindow_Loaded;
         }
 
-        ServerViewModel viewModel;
-
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            viewModel = new ServerViewModel();
-            this.DataContext = viewModel;
-        }
     }
 }
