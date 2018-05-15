@@ -6,7 +6,7 @@ namespace SkyViewerServer
     /// <summary>
     /// WinSetting.xaml 的交互逻辑
     /// </summary>
-    public partial class WinSetting : Window
+    public partial class WinSetting 
     {
 
         public WinSetting(ClientSetting setting)

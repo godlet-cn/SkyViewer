@@ -21,9 +21,9 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal"  Grid.Row="1">
-            <Button x:Name="btnStart" Content="启动浏览器" Width="100" Height="30" Margin="5" Command="{Binding StartCommand}"></Button>
-            <Button x:Name="btnClose" Content="关闭浏览器" Width="100" Height="30" Margin="5" Command="{Binding CloseCommand}"></Button>
-            <Button x:Name="btnSetting" Content="设置" Width="100" Height="30" Margin="5" Command="{Binding SettingCommand}"></Button>
+            <Button x:Name="btnStart" Content="启动浏览器" Width="100" Height="30" Margin="5" Command="{Binding StartCommand}" Style="{StaticResource btnStyle}"></Button>
+            <Button x:Name="btnClose" Content="关闭浏览器" Width="100" Height="30" Margin="5" Command="{Binding CloseCommand}" Style="{StaticResource btnStyle}"></Button>
+            <Button x:Name="btnSetting" Content="设置" Width="100" Height="30" Margin="5" Command="{Binding SettingCommand}" Style="{StaticResource btnStyle}"></Button>
         </StackPanel>
 
 

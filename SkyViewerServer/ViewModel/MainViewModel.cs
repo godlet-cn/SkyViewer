@@ -102,7 +102,8 @@ namespace SkyViewerServer.ViewModel
                 {
                     foreach (var item in ClientConnections)
                     {
-                        if (item.ClientIpAddress.Equals(socket.ConnectionInfo.ClientIpAddress))
+                        if (item.ClientIpAddress.Equals(socket.ConnectionInfo.ClientIpAddress)
+                        && item.Port==socket.ConnectionInfo.ClientPort)
                         {
                             return;
                         }
@@ -118,7 +119,6 @@ namespace SkyViewerServer.ViewModel
             }));
         }
 
-
         private void RemoveConnection(IWebSocketConnection socket)
         {
             Application.Current.Dispatcher.BeginInvoke(new Action(() =>
@@ -126,7 +126,8 @@ namespace SkyViewerServer.ViewModel
                 ClientConnection conn = null;
                 foreach (var item in ClientConnections)
                 {
-                    if (item.ClientIpAddress.Equals(socket.ConnectionInfo.ClientIpAddress))
+                    if (item.ClientIpAddress.Equals(socket.ConnectionInfo.ClientIpAddress)
+                    && item.Port == socket.ConnectionInfo.ClientPort)
                     {
                         conn = item;
                     }
@@ -143,7 +144,8 @@ namespace SkyViewerServer.ViewModel
             ClientConnection conn = null;
             foreach (var item in ClientConnections)
             {
-                if (item.ClientIpAddress.Equals(socket.ConnectionInfo.ClientIpAddress))
+                if (item.ClientIpAddress.Equals(socket.ConnectionInfo.ClientIpAddress)
+                    && item.Port == socket.ConnectionInfo.ClientPort)
                 {
                     conn = item;
                 }

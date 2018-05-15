@@ -1,18 +1,19 @@
-﻿<Window x:Class="SkyViewerServer.MainWindow"
+﻿<ctrl:CommonWindow x:Class="SkyViewerServer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkyViewerServer"
+        xmlns:ctrl="clr-namespace:Common.Controls;assembly=Common"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="服务端" Height="350" Width="525">
-    <Window.Resources>
+        Title="服务端" Height="600" Width="800">
+    <ctrl:CommonWindow.Resources>
         <local:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></local:BooleanToVisibilityConverter>
-    </Window.Resources>
+    </ctrl:CommonWindow.Resources>
 
-    <Window.DataContext>
+    <ctrl:CommonWindow.DataContext>
         <Binding Path="Main" Source="{StaticResource Locator}" />
-    </Window.DataContext>
+    </ctrl:CommonWindow.DataContext>
     
     <Grid>
         <Grid.RowDefinitions>
@@ -22,9 +23,11 @@
 
         <StackPanel Orientation="Horizontal">
             <Button Width="200" Height="35" Content="启动WebSocket Server" Command="{Binding StartCommand}"  Margin="5"
+                    Style="{StaticResource btnStyle}"
                     Visibility="{Binding IsServerStarted ,Converter={StaticResource BooleanToVisibilityConverter},ConverterParameter=false}"></Button>
 
             <Button Width="200" Height="35" Content="停止WebSocket Server" Command="{Binding CloseCommand}" Margin="5"
+                    Style="{StaticResource btnStyle}"
                     Visibility="{Binding IsServerStarted ,Converter={StaticResource BooleanToVisibilityConverter},ConverterParameter=true}"></Button>
         </StackPanel>
 
@@ -48,4 +51,4 @@
         </Grid>
 
     </Grid>
-</Window>
+</ctrl:CommonWindow>

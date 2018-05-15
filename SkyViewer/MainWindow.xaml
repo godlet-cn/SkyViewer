@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        WindowStyle="None" AllowsTransparency="True"
-         xmlns:ctrl="clr-namespace:SkyViewer"
+        WindowStyle="None" AllowsTransparency="True" TitleHeight="0"
+        xmlns:ctrl="clr-namespace:Common.Controls;assembly=Common"
         Title="SkyViewer" Height="450" Width="800">
     <Grid>
         <cefSharp:ChromiumWebBrowser x:Name="browser" Grid.Row="0" Address="www.skyworth.com"/>

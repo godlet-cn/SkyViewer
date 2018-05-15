@@ -35,7 +35,7 @@ namespace SkyViewerServer
         private string clientIpAddress;
 
         /// <summary>
-        /// 是否显示画笔属性面板
+        /// 客户端IP
         /// </summary>
         public string ClientIpAddress
         {
@@ -44,6 +44,20 @@ namespace SkyViewerServer
             {
                 clientIpAddress = value;
                 RaisePropertyChanged("ClientIpAddress");
+            }
+        }
+
+        private int port;
+
+        /// <summary>
+        /// 客户端通讯端口
+        /// </summary>
+        public int Port {
+            get {
+                return port;
+            }
+            set {
+                port = value;
             }
         }
 
